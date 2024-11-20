@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Link } from 'react-router-dom';
 
+// eslint-disable-next-line react/prop-types
 const LabelInputGroup = ({ children }) => <div className='flex flex-col gap-2'>{children}</div>;
 
 const Login = () => {
