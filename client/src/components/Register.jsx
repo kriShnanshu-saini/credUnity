@@ -10,8 +10,8 @@ const LabelInputGroup = ({ children }) => <div className='flex flex-col gap-2'>{
 // TODO: Add zod schema validation and render error messages
 const Register = () => {
 	return (
-		<div className='w-full h-full grid place-items-center mt-20'>
-			<Card>
+		<div className='w-full min-h-dvh grid place-items-center'>
+			<Card className="w-1/4">
 				<CardHeader>
 					<CardTitle>Create an account</CardTitle>
 					<CardDescription>Enter your email below to create an account</CardDescription>
@@ -21,27 +21,27 @@ const Register = () => {
 						<div className='grid w-full items-center gap-4'>
 							<LabelInputGroup>
 								<Label htmlFor='name'>Name</Label>
-                                <Input id="name" placeholder="John Doe"/>
+                                <Input autoFocus tabIndex={1} id="name" placeholder="John Doe"/>
                             </LabelInputGroup>
 							<LabelInputGroup>
                                 <div className='flex w-full items-center justify-between'>
                                     <Label htmlFor='email'>Email address</Label>
-                                    <Link to='verify'><small>Verify</small></Link>
+                                    <Link tabIndex={4} to='verify'><small>Verify</small></Link>
                                 </div>
-                                <Input id="email" placeholder="john.doe@credunity.io" />
+                                <Input tabIndex={2} id="email" placeholder="john.doe@credunity.io" />
                             </LabelInputGroup>
                             <LabelInputGroup>
                                 <Label htmlFor='password'>Password</Label>
-                                <Input id="password" type="password" placeholder="Password" />
+                                <Input tabIndex={3} id="password" type="password" placeholder="Password" />
                             </LabelInputGroup>
-                            <Button type="submit" className="w-full ">Create account</Button>
+                            <Button tabIndex={5} type="submit" className="w-full ">Create account</Button>
 						</div>
                     </form>
                 </CardContent>
                 <CardFooter>
                     <small className='text-center w-full'>
-                        Already have an account?
-                        <Link to="/auth/login" className='text-black/80 font-medium'>Login</Link>
+                        Already have an account? &nbsp;
+                        <Link tabIndex={6} to="/auth/login" className='text-black/80 font-medium dark:text-white'>Login</Link>
                     </small>
                 </CardFooter>
 			</Card>

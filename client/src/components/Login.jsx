@@ -9,7 +9,7 @@ const LabelInputGroup = ({ children }) => <div className='flex flex-col gap-2'>{
 
 const Login = () => {
 	return (
-		<div className='w-full h-full grid place-items-center mt-20'>
+		<div className='w-full min-h-dvh grid place-items-center'>
 			<Card className="w-1/4">
 				<CardHeader>
 					<CardTitle>Login</CardTitle>
@@ -20,18 +20,18 @@ const Login = () => {
                         <div className='grid w-full items-center gap-4'>
                             <LabelInputGroup>
                                 <Label htmlFor="email">Email address</Label>
-                                <Input type="email" id="email" name="email" placeholder="john.doe@credunity.io"/>
+                                <Input autoFocus tabIndex={1} type="email" id="email" name="email" placeholder="john.doe@credunity.io"/>
                             </LabelInputGroup>
                             <LabelInputGroup>
                                 <Label htmlFor="password">Password</Label>
-                                <Input type="password" id="password" name="password" placeholder="Password"/>
+                                <Input tabIndex={2} type="password" id="password" name="password" placeholder="Password"/>
                             </LabelInputGroup>
-                            <Button type="submit">Login</Button>
+                            <Button tabIndex={3} type="submit">Login</Button>
                         </div>
 					</form>
                 </CardContent>
                 <CardFooter>
-                    <small className='w-full text-center'>Don&apos;t have an account? <Link to="/register" className="text-black/80 font-medium">Register</Link></small>
+                    <small className='w-full text-center'>Don&apos;t have an account? <Link tabIndex={4} to="/auth/create-account" className="text-black/80 font-medium dark:text-white">Register</Link></small>
                 </CardFooter>
 			</Card>
 		</div>
